@@ -1,8 +1,0 @@
-{
-	"name": "Purenav",
-	"description": "Converts your <ul> style navigation to a dropdown list for small screens",
-	"version": "0.1.1",
-	"keyword": ["mobile", "drop-down", "navigation", "ender"],
-	"authors": ["Lukasz Fiszer"],
-	"main": "purenav.js"
-}
