@@ -244,15 +244,15 @@ li { margin-bottom: 0.75em; }
 a.btn { text-decoration: none; }
 
 /* styles for desktop */
-.js .purenav { display: none; }
+.js .selectnav { display: none; }
 
 /* styles for mobile */
 @media screen and (max-width: 700px) { .js #nav { display: none; }
-  .js .purenav { display: inline-block; margin-left: 1.5em; zoom: 1; *display: inline; } }
+  .js .selectnav { display: inline-block; margin-left: 1.5em; zoom: 1; *display: inline; } }
 .js #example-nav1 { display: none; }
 
-.js #purenav2.purenav { display: block; }
+.js #selectnav2.selectnav { display: block; }
 
 .js #example-nav2 { display: none; }
 
-.js #purenav3.purenav { display: block; }
+.js #selectnav3.selectnav { display: block; }
