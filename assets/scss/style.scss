@@ -70,7 +70,7 @@ section, #title, #download{
 
 	#title, #download,
 	#what, #why,
-	#how-html, #how-css, #how-js, #how-customize,
+	#how-html, #how-css, #how-js, #how-options,
 	#example1, #example2 {
 		@include column(6);
 	}
@@ -168,7 +168,17 @@ body {
 }
 
 h1 {
-	font-size: 4em;
+	font-size: 2em;
+	text-align: center;
+	
+	@media screen and (min-width: 15em){
+		font-size: 2.5em;
+	}
+		
+	@media screen and (min-width: 20em){
+		font-size: 3.5em;
+	}
+	
 	@media screen and (min-width: 35em){
 		font-size: 5em;
 	}

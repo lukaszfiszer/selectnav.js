@@ -184,7 +184,7 @@ section, #title, #download { padding: 1.5em 2.5em 1.5em 2.5em; }
 .section-title:after { clear: both; }
 .section-title h2 { padding: 0em 1.5em 0 1.5em; padding-top: 1.5em; }
 
-@media screen and (min-width: 600px) { #title, #download, #what, #why, #how-html, #how-css, #how-js, #how-customize, #example1, #example2 { display: inline; float: left; width: 47.917%; margin: 0 1.042%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; *behavior: url(../js/boxsizing.htc); }
+@media screen and (min-width: 600px) { #title, #download, #what, #why, #how-html, #how-css, #how-js, #how-options, #example1, #example2 { display: inline; float: left; width: 47.917%; margin: 0 1.042%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; *behavior: url(../js/boxsizing.htc); }
   #how h2, #examples #h2 { display: inline; float: left; width: 97.917%; margin: 0 1.042%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; *behavior: url(../js/boxsizing.htc); }
   #how-js { clear: left; }
   #download { padding-top: 5em; } }
@@ -200,7 +200,9 @@ nav a:hover { background: #444; color: #FFF; }
 
 body { font-size: 13px; line-height: 1.5384em; font-family: sans-serif; font-weight: 300; }
 
-h1 { font-size: 4em; }
+h1 { font-size: 2em; text-align: center; }
+@media screen and (min-width: 15em) { h1 { font-size: 2.5em; } }
+@media screen and (min-width: 20em) { h1 { font-size: 3.5em; } }
 @media screen and (min-width: 35em) { h1 { font-size: 5em; } }
 
 h1, #brand { font-family: 'Leckerli One', cursive; font-weight: normal; }

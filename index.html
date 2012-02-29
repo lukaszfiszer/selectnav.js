@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,  user-scalable = no" />
 
-	<title>SelectNav.js</title>
+	<title>SelectNav.js - responsive drop-down menu - pure JavaScript</title>
 	
 	<link href="assets/css/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
@@ -55,7 +55,7 @@
 				<li><a href="#how-html">HTML</a></li>
 				<li><a href="#how-css">CSS</a></li>
 				<li><a href="#how-js">JS</a></li>
-				<li><a href="#how-customize">Customize</a></li>
+				<li><a href="#how-options">Options</a></li>
 			</ul>
 		</li>
 		<li><a href="#examples">Examples</a></li>
@@ -72,7 +72,7 @@
 	<header> 
 		<hgroup id="title">	
 		<h1 class="top">SelectNav.js</h1>
-		<h2>Responsive drop-down menu navigation for mobiles and small screen devices.</h2>
+		<h2>Responsive drop-down navigation<br/>for mobiles and small screen devices.</h2>
 		</hgroup>
 	
 		<div id="download">
@@ -85,6 +85,7 @@
 	<h2>About</h2>
 	<p>SelectNav.js is a JavaScript plugin that lets you convert your website navigation into a <code>select</code> drop-down menu. Used together with media queries it helps you to create a space saving, responsive navigation for small screen devices.</p>
 	<p>Inspired by <a href="http://tinynav.viljamis.com/">TinyNav.js</a>, it was rewritten from scratch to become jQuery independent and customizable. </p>
+	<p> <strong>To see it in action</strong> just resize this page and observe the topbar.</p>
 	</section>
 			
 	<section id="why">		
@@ -110,7 +111,7 @@
 &lt;li>&lt;a href="about.html" class="active">About us&lt;/a>&lt;/li>
 &lt;li>&lt;a href="contact.html">Contact&lt;/a>&lt;/li>
 &lt;/ul></code></pre>
-<p>Selectnav.js works with all navigation in form of <code>ul</code> and  <code>li</code> lists that follow the example above.</p>
+<p>Selectnav.js works with every navigation in form of <code>ul</code> or  <code>ol</code> lists that follow the example above.</p>
 <p>The <code>id</code> property will be later passed to the JavaScript function.</p>
 <p>Do you have nested lists in your menu? Not a problem - just make sure they are proprerly structured!</p>
 
@@ -138,7 +139,7 @@
 	<p>Because the script relays on <code>@media</code> property of CSS3, it is <s>highly recommended</s> <em> obligatory</em> to use it together with <a href="https://github.com/scottjehl/Respond">a media query polyfill</a>. If you haven't included it yet into your design, don't wait a second - download it right way and enjoy a responsive layout on IE 6-8 and some older mobile browsers.</p>   
 		</section>
 	
-	<section id="how-customize">
+	<section id="how-options">
 	<h3>4. Options... </h3>
 	
 	<p>The <code>selectnav</code> function takes as the second argument a key-value list of the following optional parameters: </p>
@@ -233,5 +234,18 @@
 		
 	</section>
 </div>	</div>	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29590352-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>
