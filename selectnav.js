@@ -1,13 +1,13 @@
 /*!
- * PureNav.js (v. 0.1)
+ * SelectNav.js (v. 0.1)
  * Converts your <ul>/<ol> navigation into a dropdown list for small screens
  */
 
-window.purenav = (function(){
+window.selectnav = (function(){
 	
 "use strict";
 			
-	var purenav = function(element,options){
+	var selectnav = function(element,options){
 		
 		element = document.getElementById(element);
 
@@ -64,8 +64,8 @@ window.purenav = (function(){
 		}
 		
 		function id(nextId){
-			for(var j=1; document.getElementById('purenav'+j);j++);
-			return (nextId) ? 'purenav'+j : 'purenav'+(j-1);
+			for(var j=1; document.getElementById('selectnav'+j);j++);
+			return (nextId) ? 'selectnav'+j : 'selectnav'+(j-1);
 		}
 
 		function parselist(list){
@@ -117,7 +117,7 @@ window.purenav = (function(){
 			if(level === 1 && label) html = '<option value="">' + label + '</option>' + html;
 		
 			// add <select> tag to the top level of the list
-			if(level === 1) html = '<select class="purenav" id="'+id(true)+'">' + html + '</select>';
+			if(level === 1) html = '<select class="selectnav" id="'+id(true)+'">' + html + '</select>';
 	
 			// go 1 level up
 			level--;
@@ -128,7 +128,7 @@ window.purenav = (function(){
 	};
 	
 	return function (element,options) { 
-		purenav(element,options);
+		selectnav(element,options);
 	};
 
 

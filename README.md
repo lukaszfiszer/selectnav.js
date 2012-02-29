@@ -22,7 +22,7 @@ Inspired by TinyNav.js, it was rewritten from scratch to become jQuery independe
 <li><a href="about.html" class="active">About us</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
-``
+```
 
 Selectnav.js works with all navigation in form of ul and li lists that follow the example above.
 
@@ -32,7 +32,7 @@ Do you have nested lists in your menu? Not a problem - just make sure they are p
 
 ## CSS
 
-``css
+```css
 /* default style */
 .purenav { display: none; }
 
@@ -41,16 +41,16 @@ Do you have nested lists in your menu? Not a problem - just make sure they are p
   .js #nav { display: none; }
   .js .purenav { display: block; }
 }
-``
+```
 
 SelectNav.js adds a js class to the html element. Thanks to this, when JavaScript is disabled the default navigation will be visible.
 
 ## JavaScript
 
-```js
+````js
 <script src="purenav.min.js"></script>
 <script>purenav('nav'); </script>
-``
+```
 
 The script must be fired after the the DOM is ready. You can achieve this either by putting those two lines at the bottom of your page, either, what is recommended, by wrapping them in a domReady function.
 
