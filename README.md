@@ -70,3 +70,13 @@ The `selectnav` function takes as the second argument a key-value list of the fo
 # Demos
 
 See http://lukaszfiszer.github.com/selectnav.js/ for live demo and examples
+
+# Ender
+
+You want to use it with [Ender](http://ender.no.de/)? Not a problem:
+
+```
+ender add selectnav.js
+```
+
+Don't know what Ender is? [Find out](http://ender.no.de/) and fell in love!
