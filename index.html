@@ -1,88 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,  user-scalable = no" />
 
-  <title>lukaszfiszer/selectnav.js @ GitHub</title>
+	<title>SelectNav.js</title>
+	<link href="assets/css/style.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #879dfb;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #786204; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #786204; }
-    h3 { text-align: center; color: #786204; }
-    a { color: #786204; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<script src="ender.js"></script>
+<!--	<script src="respond.min.js"></script>	-->
+	<script src="purenav.js"></script>
+	<script type="text/javascript" src="assets/js/prettify.js"></script>
+
+	<script>
+		domready(function(){
+		
+			purenav('nav', {
+				label: '--- Navigation --- '
+			});
+
+			purenav('example-nav1', {
+				activeclass: 'ThisIsActive',
+				nested: false,
+				label: false
+			});
+			
+			purenav('example-nav2', {
+				label: '### Table of content ###',
+				nested: true,
+				indent: '-'
+			});
+			
+			//hijs();	
+			prettyPrint()
+		})
+	</script>
+
+
 </head>
-
 <body>
-  <a href="https://github.com/lukaszfiszer/selectnav.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+	
+	<nav><div id="nav-wrapper">
+	<ul id="nav">
+		<li><a href="#what">About</a></li>
+		<li><a href="#why">Features</a></li>
+		<li>
+			<a href="#how">Usage</a>
+			<ul class="nav">
+				<li><a href="#how-html">HTML</a></li>
+				<li><a href="#how-css">CSS</a></li>
+				<li><a href="#how-js">JS</a></li>
+				<li><a href="#how-customize">Customize</a></li>
+			</ul>
+		</li>
+		<li><a href="#examples">Examples</a></li>
+    </ul>
+	<a id="brand" href="#">
+	  selectnav.js
+	</a>
+	</div></nav>
+	
+	
+	
+	<div id="wrapper">
+	
+	<header> 
+		<hgroup id="title">	
+		<h1 class="top">SelectNav.js</h1>
+		<h2>Responsive drop-down menu navigation for mobiles and small screen devices.</h2>
+		</hgroup>
+	
+		<div id="download">
+		<a href="" class="btn btn-large btn-primary">Download the latest version<br/> from Github</a>
+		</div>
+	</header>
+	
+	<div id="innerWrapper">
+	<section id="what">
+	<h2>About</h2>
+	<p>SelectNav.js is a JavaScript plugin that lets you convert your website navigation into a <code>select</code> drop-down menu. Used together with media queries it helps you to create a space saving, responsive navigation for small screen devices.</p>
+	<p>Inspired by <a href="http://tinynav.viljamis.com/">TinyNav.js</a>, it was rewritten from scratch to become jQuery independent and customizable. </p>
+	</section>
+			
+	<section id="why">		
+	<h2>Features</h2>
+	<ul>
+		<li><strong>Independent</strong> - no external library or other dependecies</li>
+		<li><strong>Ligthweight</strong> - only 1.5KB minified and 0.8KB minified+gziped </li>
+		<li><strong>Customizable</strong> - to make it suit your needs</li>
+		<li><strong>Compatible</strong> - tested with IE 6+, Firefox 3.6+, Chrome 4+, Safari 3+, Mobile Safari iOS 3.2+, Android 2.3+ Browser, Opera Mobile, Opera Mini. </li>
+	</ul>
+	</section>
+	
+	<div id="how" class="section-title">
+	<h2>Usage</span></h2>
+	</div>
 
-  <div id="container">
 
-    <div class="download">
-      <a href="https://github.com/lukaszfiszer/selectnav.js/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/lukaszfiszer/selectnav.js/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+			
+	<section id="how-html">
+	<h3 >1. HTML structure</h3>
+	<pre><code  class="prettyprint">&lt;ul id="nav">
+&lt;li>&lt;a href="homepage.html">Homepage&lt;/a>&lt;/li>
+&lt;li>&lt;a href="about.html" class="active">About us&lt;/a>&lt;/li>
+&lt;li>&lt;a href="contact.html">Contact&lt;/a>&lt;/li>
+&lt;/ul></code></pre>
+<p>Selectnav.js works with all navigation in form of <code>ul</code> and  <code>li</code> lists that follow the example above.</p>
+<p>The <code>id</code> property will be later passed to the JavaScript function.</p>
+<p>Do you have nested lists in your menu? Not a problem - just make sure they are proprerly structured!</p>
 
-    <h1><a href="https://github.com/lukaszfiszer/selectnav.js">selectnav.js</a>
-      <span class="small">by <a href="https://github.com/lukaszfiszer">lukaszfiszer</a></span></h1>
+	</section>
+	
+	<section id="how-css">
+	<h3>2. CSS </h3>
+	<pre><code class="prettyprint">/* default style */
+.purenav { display: none; }
 
-    <div class="description">
-      Convert website navigation into a responsive drop-down menu for mobiles and small screen devices.
-    </div>
+/* small screen */
+@media screen and (max-width: 600px) {
+  .js #nav { display: none; }
+  .js .purenav { display: block; }
+}</code></pre>
+<p>SelectNav.js adds a <code>js</code> class to the <code>html</code> element. Thanks to this, when JavaScript is disabled the default navigation will be visible.  </p>
 
-    
+	</section>
+	
+		<section id="how-js">
+		<h3>3. JavaScript </h3>
+		<pre><code  class="prettyprint">&lt;script src="purenav.min.js"&gt&lt;/script&gt
+&lt;script>purenav('nav'); &lt;/script&gt</code></pre>
+	<p>The script must be fired after the the DOM is ready. You can achieve this either by putting those two lines at the bottom of your page, either, what is recommended, by wrapping them in a <a href="https://github.com/ded/domready">domReady function</a>.</p> 
+	<p>Because the script relays on <code>@media</code> property of CSS3, it is <s>highly recommended</s> <em> obligatory</em> to use it together with <a href="https://github.com/scottjehl/Respond">a media query polyfill</a>. If you haven't included it yet into your design, don't wait a second - download it right way and enjoy a responsive layout on IE 6-8 and some older mobile browsers.</p>   
+		</section>
+	
+	<section id="how-customize">
+	<h3>4. Options... </h3>
+	
+	<p>The <code>purenav</code> function takes as the second argument a key-value list of the following optional parameters: </p>
+	<ul class="plain">
+		<li><code>activeclass</code> <em>string</em> - contains the name of the active class. SelectNav.js will mark the correponding element with "selected" attribute. Change to any other string or to <em>false</em> if you want to disable this feature. Default: <em>'active'</em></li>
+		<li><code>autoselect</code> <em>boolean</em> - instead of explicitly setting an active class, you can let SelectNav.js to automatically determine the active element. Default: <em>true</em></li>
+		<li><code>nested</code> <em>boolean</em> - SelectNav.js can handle multi-level, nested menus. Set this to <em>false</em> if you want only the uppermost level of the navigation to appear in the dropdown menu. </li>
+		<li><code>indent</code> <em>char</em> - used together with <code>nested</code> attribute, it lets you specify the indent symbol. Default: <em>→</em></li>
+		<li><code>label</code> <em>string</em> - set a label that will be the first element of the drop-down menu. Default: <em>- Navigation -</em></li>
+		</ul>
+		
+	</section>
+		
+	<div id="examples"  class="section-title">	
+	<h2>Examples</h2>
+	</div>
 
-    
 
-    
+	<section id="example1">	
+		<h3>Result</h3>
+		
+		<ul id="example-nav1">
+		<li><a href="index.html">Welcome</a></li>
+		<li><a href="active.html" class="act">Active</a>
+		<ul>
+			<li><a href="not-for-mobiles.html">Hidden page</a></li>
+		</ul>
+		<li><a href="http://google.com">External</a></li>
+		<li><a href="#top">Go to top</a></li>
+		</ul>
+		
+	<h3>HTML</h3>
+	<pre><code class="prettyprint">&lt;ul id=&quot;example-nav1&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Welcome&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;active.html&quot; class=&quot;act&quot;&gt;Active&lt;/a&gt;
+    &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;hidden.html&quot;&gt;Hidden&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://google.com&quot;&gt;External&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#top&quot;&gt;Go to top&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
-    
+	<h3>JS</h3>
+	<pre><code class="prettyprint">purenav('example-nav1', {
+    activeclass: 'act',
+    nested: false,
+    label: false
+});</code></pre>
 
-    
-      <h2>Authors</h2>
-      <p>Lukasz Fiszer (lukasz.fiszer@gmail.com)<br/>      </p>
-    
+</section>
 
-    
-      <h2>Contact</h2>
-      <p>Lukasz (lukasz.fiszer@gmail.com)<br/>      </p>
-    
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/lukaszfiszer/selectnav.js/zipball/master">zip</a> or
-      <a href="https://github.com/lukaszfiszer/selectnav.js/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/lukaszfiszer/selectnav.js</pre>
-    </p>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/lukaszfiszer/selectnav.js">lukaszfiszer/selectnav.js</a>
-    </div>
+<section id="example2">	
+	<h3>Result</h3>
+	
+	<ul id="example-nav2">
+	 <li><a href="c-1.html">Chapter 1</a>
+	 <ul>
+	  <li><a href="c1-1.html">Chapter 1.1</a>
+	  <ul>
+	    <li><a href="c1-1-1.html">Chapter 1.1.1</a></li>
+	    <li><a href="c1-1-2.html">Chapter 1.1.2</a></li>
+	   </ul>
+	  </li>
+	  <li><a href="c1-2.html">Chapter 1.2</a></li>
+	 </ul>
+	 </li>
+	</ul>
+		<h3>HTML</h3>
+		<pre><code class="prettyprint">&lt;ul id=&quot;example-nav2&quot;&gt;
+ &lt;li&gt;&lt;a href=&quot;c-1.html&quot;&gt;Chapter 1&lt;/a&gt;
+ &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;c1-1.html&quot;&gt;Chapter 1.1&lt;/a&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;c1-1-1.html&quot;&gt;Chapter 1.1.1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;c1-1-2.html&quot;&gt;Chapter 1.1.2&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;c1-2.html&quot;&gt;Chapter 1.2&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
-  </div>
+		<h3>JS</h3>
+		<pre><code class="prettyprint">purenav('example-nav2', {
+  label: '### Table of content ### ',
+  nested: true,
+  indent: '-'
+});</code></pre>
 
+		
+	</section>
+</div>	</div>	
 </body>
 </html>
