@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,  user-scalable = no" />
 
 	<title>SelectNav.js</title>
+	
 	<link href="assets/css/style.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
 
@@ -12,25 +13,24 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
-	<script src="ender.js"></script>
-<!--	<script src="respond.min.js"></script>	-->
-	<script src="purenav.js"></script>
-	<script type="text/javascript" src="assets/js/prettify.js"></script>
+	<script src="assets/js/ender.min.js"></script>
+	<script src="assets/js/prettify.js"></script>
+	<script src="https://raw.github.com/lukaszfiszer/selectnav.js/master/selectnav.min.js"></script>
 
 	<script>
 		domready(function(){
 		
-			purenav('nav', {
+			selectnav('nav', {
 				label: '--- Navigation --- '
 			});
 
-			purenav('example-nav1', {
+			selectnav('example-nav1', {
 				activeclass: 'ThisIsActive',
 				nested: false,
 				label: false
 			});
 			
-			purenav('example-nav2', {
+			selectnav('example-nav2', {
 				label: '### Table of content ###',
 				nested: true,
 				indent: '-'
@@ -76,7 +76,7 @@
 		</hgroup>
 	
 		<div id="download">
-		<a href="" class="btn btn-large btn-primary">Download the latest version<br/> from Github</a>
+		<a href="https://github.com/lukaszfiszer/selectnav.js" class="btn btn-large btn-primary"><strong>Download the latest version</strong><br/> from Github</a>
 		</div>
 	</header>
 	
@@ -119,12 +119,12 @@
 	<section id="how-css">
 	<h3>2. CSS </h3>
 	<pre><code class="prettyprint">/* default style */
-.purenav { display: none; }
+.selectnav { display: none; }
 
 /* small screen */
 @media screen and (max-width: 600px) {
   .js #nav { display: none; }
-  .js .purenav { display: block; }
+  .js .selectnav { display: block; }
 }</code></pre>
 <p>SelectNav.js adds a <code>js</code> class to the <code>html</code> element. Thanks to this, when JavaScript is disabled the default navigation will be visible.  </p>
 
@@ -132,8 +132,8 @@
 	
 		<section id="how-js">
 		<h3>3. JavaScript </h3>
-		<pre><code  class="prettyprint">&lt;script src="purenav.min.js"&gt&lt;/script&gt
-&lt;script>purenav('nav'); &lt;/script&gt</code></pre>
+		<pre><code  class="prettyprint">&lt;script src="selectnav.min.js"&gt&lt;/script&gt
+&lt;script>selectnav('nav'); &lt;/script&gt</code></pre>
 	<p>The script must be fired after the the DOM is ready. You can achieve this either by putting those two lines at the bottom of your page, either, what is recommended, by wrapping them in a <a href="https://github.com/ded/domready">domReady function</a>.</p> 
 	<p>Because the script relays on <code>@media</code> property of CSS3, it is <s>highly recommended</s> <em> obligatory</em> to use it together with <a href="https://github.com/scottjehl/Respond">a media query polyfill</a>. If you haven't included it yet into your design, don't wait a second - download it right way and enjoy a responsive layout on IE 6-8 and some older mobile browsers.</p>   
 		</section>
@@ -141,7 +141,7 @@
 	<section id="how-customize">
 	<h3>4. Options... </h3>
 	
-	<p>The <code>purenav</code> function takes as the second argument a key-value list of the following optional parameters: </p>
+	<p>The <code>selectnav</code> function takes as the second argument a key-value list of the following optional parameters: </p>
 	<ul class="plain">
 		<li><code>activeclass</code> <em>string</em> - contains the name of the active class. SelectNav.js will mark the correponding element with "selected" attribute. Change to any other string or to <em>false</em> if you want to disable this feature. Default: <em>'active'</em></li>
 		<li><code>autoselect</code> <em>boolean</em> - instead of explicitly setting an active class, you can let SelectNav.js to automatically determine the active element. Default: <em>true</em></li>
@@ -182,7 +182,7 @@
 &lt;/ul&gt;</code></pre>
 
 	<h3>JS</h3>
-	<pre><code class="prettyprint">purenav('example-nav1', {
+	<pre><code class="prettyprint">selectnav('example-nav1', {
     activeclass: 'act',
     nested: false,
     label: false
@@ -224,7 +224,7 @@
 &lt;/ul&gt;</code></pre>
 
 		<h3>JS</h3>
-		<pre><code class="prettyprint">purenav('example-nav2', {
+		<pre><code class="prettyprint">selectnav('example-nav2', {
   label: '### Table of content ### ',
   nested: true,
   indent: '-'
