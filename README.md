@@ -49,9 +49,9 @@ SelectNav.js adds a js class to the html element. Thanks to this, when JavaScrip
 
 ## JavaScript
 
-```js
-<script src="purenav.min.js"></script>
-<script>purenav('nav'); </script>
+```javascript
+<script src="selectnav.min.js"></script>
+<script>selectnav('nav'); </script>
 ```
 
 The script must be fired after the the DOM is ready. You can achieve this either by putting those two lines at the bottom of your page, either, what is recommended, by wrapping them in a [domReady function](https://github.com/ded/domready).
@@ -62,7 +62,7 @@ Because the script depends on @media property of CSS3, it is highly recommended 
 
 The `selectnav` function takes as the second argument a key-value list of the following optional parameters:
 
-* `activeclass` *string* - contains the name of the active class. SelectNav.js will mark the correponding element with "selected" attribute. Change to any other string or to false if you want to disable this feature. **Default** 'active'
+* `activeclass` *string* - contains the name of the active class. SelectNav.js will mark the correponding element with "selected" attribute. Change to an empty string or to false if you want to disable this feature. **Default** 'active'
 * `autoselect` *boolean* - instead of explicitly setting an active class, you can let SelectNav.js to automatically determine the active element. **Default** true
 * `nested` *boolean* - SelectNav.js can handle multi-level, nested menus. Set this to false if you want only the uppermost level of the navigation to appear in the dropdown menu. **Default** true
 * `indent` *char* - used together with nested attribute, it lets you specify the indent symbol. **Default** →
