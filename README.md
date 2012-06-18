@@ -4,6 +4,8 @@ SelectNav.js is a JavaScript plugin that lets you convert your website navigatio
 
 Inspired by [TinyNav.js](http://tinynav.viljamis.com/), it was rewritten from scratch to become jQuery independent and customizable.
 
+Questions, comments, bugs? Feel free to ping me on Twitter - [@lukaszfiszer](http://twitter.com/#!/lukaszfiszer).
+
 # Features
 
 * Independent - no external library or other dependecies
