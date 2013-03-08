@@ -22,6 +22,11 @@ window.selectnav = (function(){
       return;
     }
 
+    // return immediately if no support for insertAdjacentHTML (Firefox 7 and under)
+    if( ! ('insertAdjacentHTML' in window.document.documentElement) ){
+      return;
+    }
+
     // add a js class to <html> tag
     document.documentElement.className += " js";
 
@@ -107,7 +112,7 @@ window.selectnav = (function(){
           var isselected = '';
 
           if(activeclass){
-            isselected = link.className.search(activeclass) !== -1 || link.parentElement.className.search(activeclass) !== -1 ? selected : '';
+            isselected = link.className.search(activeclass) !== -1 || link.parentNode.className.search(activeclass) !== -1 ? selected : '';
           }
 
           if(autoselect && !isselected){
