@@ -66,9 +66,9 @@ window.selectnav = (function(){
       if (e.target) targ = e.target;
       else if (e.srcElement) targ = e.srcElement;
       if (targ.nodeType === 3) // defeat Safari bug
-        targ = targ.parentNode; 
+        targ = targ.parentNode;
 
-      if(targ.value) window.location.href = targ.value; 
+      if(targ.value) window.location.href = targ.value;
     }
 
     function islist(list){
@@ -149,7 +149,7 @@ window.selectnav = (function(){
   };
 
   return function (element,options) {
-    selectnav(element,options);
+    return selectnav(element,options);
   };
 
 

@@ -1,0 +1,31 @@
+{
+  "name": "selectnav.js",
+  "version": "0.1.0",
+  "description": "SelectNav.js is a JavaScript plugin that lets you convert your website navigation into a select drop-down menu. Used together with media queries it helps you to create a space saving, responsive navigation for small screen devices.",
+  "main": "selectnav-new.js",
+  "devDependencies": {
+    "karma": "~0.10.9",
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "karma-mocha": "~0.1.1"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukaszfiszer/selectnav.js.git"
+  },
+  "keywords": [
+    "browser",
+    "frontend",
+    "responsive",
+    "menu",
+    "navigation"
+  ],
+  "author": "Lukasz Fiszer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukaszfiszer/selectnav.js/issues"
+  }
+}
