@@ -4,13 +4,16 @@
   "description": "SelectNav.js is a JavaScript plugin that lets you convert your website navigation into a select drop-down menu. Used together with media queries it helps you to create a space saving, responsive navigation for small screen devices.",
   "main": "selectnav-new.js",
   "devDependencies": {
-    "karma": "~0.10.9",
-    "chai": "~1.9.0",
-    "mocha": "~1.17.1",
-    "karma-mocha": "~0.1.1"
+    "karma": "~0.12.31",
+    "chai": "~2.0.0",
+    "mocha": "~2.1.0",
+    "karma-mocha": "~0.1.10",
+    "karma-cli": "0.0.4",
+    "phantomjs": "~1.9.15",
+    "karma-phantomjs-launcher": "~0.1.4"
   },
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
