@@ -134,7 +134,6 @@ window.selectnav = (function(){
                 isInclude = link.className.search(exludeClass) !== -1 || link.parentNode.className.search(exludeClass) !== -1 ? false : true;
                 
             } 
-            console.log(exludeClass,isInclude);
 
             if(isInclude){
                 html += '<option value="' + link.href + '" ' + isselected + '>' + prefix + text +'</option>';
