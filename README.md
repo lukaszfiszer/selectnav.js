@@ -20,9 +20,11 @@ Questions, comments, bugs? Feel free to ping me on Twitter - [@lukaszfiszer](htt
 
 ```html
 <ul id="nav">
-<li><a href="homepage.html">Homepage</a></li>
-<li><a href="about.html" class="active">About us</a></li>
-<li><a href="contact.html">Contact</a></li>
+  <li><a class="selectnav-exclude" href="homepage.html">Homepage</a></li>
+  <li ><a href="about.html" class="active">About us</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li ><a href="about.html">Mobile Link</a></li>
+  <li class="selectnav-exclude" ><a href="contact.html">Only Desktop Link</a></li>
 </ul>
 ```
 
@@ -63,6 +65,7 @@ Because the script depends on @media property of CSS3, it is highly recommended 
 The `selectnav` function takes as the second argument a key-value list of the following optional parameters:
 
 * `activeclass` *string* - contains the name of the active class. SelectNav.js will mark the correponding element with "selected" attribute. Change to an empty string or to false if you want to disable this feature. **Default** 'active'
+* `exludeClass` *string* - contains the name of the excluding class. SelectNav.js will exclude the respective element from the select list. **Default** 'selectnav-exclude'
 * `autoselect` *boolean* - instead of explicitly setting an active class, you can let SelectNav.js to automatically determine the active element. **Default** true
 * `nested` *boolean* - SelectNav.js can handle multi-level, nested menus. Set this to false if you want only the uppermost level of the navigation to appear in the dropdown menu. **Default** true
 * `indent` *char* - used together with nested attribute, it lets you specify the indent symbol. **Default** →
@@ -71,7 +74,7 @@ The `selectnav` function takes as the second argument a key-value list of the fo
 
 # Demos
 
-See http://lukaszfiszer.github.com/selectnav.js/ for live demo and examples
+See http://lukaszfiszer.github.com/selectnav.js/ AND https://jsfiddle.net/w0zp8qsf/2/ for live demo and examples
 
 # Ender
 
