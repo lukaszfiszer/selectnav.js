@@ -4,6 +4,14 @@
  * https://github.com/lukaszfiszer/selectnav.js
  */
 
+
+/*
+
+Improvements:
+ Excludes the links which we dont want to show in responsive menu, To remove those add class selectnav-exclude
+
+*/
+
 window.selectnav = (function(){
 
 "use strict";
@@ -34,6 +42,7 @@ window.selectnav = (function(){
     var o = options || {},
 
       activeclass = o.activeclass || 'active',
+      exludeClass = o.exludeClass || 'selectnav-exclude',// <== Excludes the links which we dont want to show in responsive menu, To remove those add class selectnav-exclude.
       autoselect = typeof(o.autoselect) === "boolean" ? o.autoselect : true,
       nested = typeof(o.nested) === "boolean" ? o.nested : true,
       indent = o.indent || "→",
@@ -110,6 +119,7 @@ window.selectnav = (function(){
         if(typeof(link) !== 'undefined'){
           var text = link.innerText || link.textContent;
           var isselected = '';
+            var isInclude = true;
 
           if(activeclass){
             isselected = link.className.search(activeclass) !== -1 || link.parentNode.className.search(activeclass) !== -1 ? selected : '';
@@ -118,8 +128,18 @@ window.selectnav = (function(){
           if(autoselect && !isselected){
             isselected = link.href === document.URL ? selected : '';
           }
+            
+            if(exludeClass){
+                
+                isInclude = link.className.search(exludeClass) !== -1 || link.parentNode.className.search(exludeClass) !== -1 ? false : true;
+                
+            } 
+            console.log(exludeClass,isInclude);
 
-          html += '<option value="' + link.href + '" ' + isselected + '>' + prefix + text +'</option>';
+            if(isInclude){
+                html += '<option value="' + link.href + '" ' + isselected + '>' + prefix + text +'</option>';
+            }
+          
 
           if(nested){
             var subElement = list.children[i].children[1];
